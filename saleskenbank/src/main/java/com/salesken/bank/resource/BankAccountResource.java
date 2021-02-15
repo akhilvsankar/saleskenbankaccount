@@ -69,7 +69,7 @@ public class BankAccountResource {
 	public ResponseEntity<Boolean> updateAccount(
 			@RequestBody @Validated(OnUpdate.class) AccountSaveDTO accountCreateDTO, Errors errors)
 			throws BadRequestAlertException {
-		BankAccountResource.LOGGER.debug("REST request to create bank account details : {}", accountCreateDTO);
+		BankAccountResource.LOGGER.debug("REST request to update bank account details : {}", accountCreateDTO);
 		if (errors.hasGlobalErrors()) {
 
 			throw new BadRequestAlertException(errors.getGlobalError().getDefaultMessage());
